@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+    --primary-bale-blue:hsl(225, 100%, 94%);
+    --primary-bright-blue:hsl(245, 75%, 52%);
+
+    --neutral-very-pale-blue: hsl(225, 100%, 98%);
+    --neutral-dsaturated-blue: hsl(224, 23%, 55%);
+    --neutral-dark-blue: hsl(223, 47%, 23%);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Red Hat Display',sans-serif;
+    font-size: 16px;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(./images/pattern-background-mobile.svg);
+    background-color: var(--primary-bale-blue);
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    max-width: 27.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    border-radius: 20px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 15px 25px 0 hsla(245, 75%, 52%,.3);
+}
+
+.img-hero img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.content{
+    text-align: center;
+}
+
+.title h3{
+    color: var(--neutral-dark-blue);
+    padding: 1.2em 0 0.8em 0; 
+    font-size: 1.3rem;
+    font-weight: 900;  
+}
+
+.text-content p{
+    color: var(--neutral-dsaturated-blue);
+    font-size: .9rem;
+    font-weight: 500;
+    padding: 0 2.1em 1.4em 2.1em;
+    line-height: 1.6;
+}
+
+.plan-box{
+    background-color: var(--neutral-very-pale-blue);
+    margin: 0 1.5em 1.3em 1.5em;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .7em;
+}
+
+.plan-box-middle{
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+    justify-content: center;
+    text-align: left;
+    padding:0.5em
+}
+
+.plan-box-middle h5{
+    color: var(--neutral-dark-blue);
+    font-size: .9rem;
+}
+
+.plan-box-middle p{
+    color: var(--neutral-dsaturated-blue);
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+.plan-box-right a {
+    color: var(--primary-bright-blue);
+    font-weight: 700;
+    font-size: 0.8rem;
+    transition: 0.3s ease;
+    opacity: 1;
+  }
+
+  .plan-box-right a:hover {
+    opacity: .75;
+    text-decoration: none;
+  }
+
+  .btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: .5em;
+    margin-bottom: 1.2em;
+  }
+
+  [class^="btn-"]{
+    all:unset;
+    display: block;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: .95rem;
+    font-weight: 700;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    padding: 1em;
+  }
+
+  .btn-payment {
+    background: var(--primary-bright-blue);
+    font-size: .9rem;
+    color: white;
+    box-shadow: 0 15px 20px 0 hsla(245, 75%, 52%, .25);
+    opacity: 1;
+    transition: all .2s ease;
+  }
+  
+  .btn-payment:hover {
+    opacity: .8;
+  }
+  
+  .btn-cancel {
+    color: var(--neutral-dsaturated-blue);
+    transition: color .2s ease;
+  }
+  
+  .btn-cancel:hover {
+    color: var(--neutral-dark-blue);
+  }
+
+  @media (min-width:425px) {
+
+    body {
+      background-image: url(./images/pattern-background-desktop.svg);
+      background-color: var(--primary-bale-blue);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    .text-content p{
+      font-size: 1rem;
+      padding-left: 3em;
+      padding-right: 3em;
+    }
+
+    .plan-box{
+      margin-left: 2.5em;
+      margin-right: 2.5em;
+    }
+
+    [class^="btn-"]{
+      margin-left: 2.5em;
+      margin-right: 2.5em;
+    }
+      
+  }
+
+  @media  (min-width:1025px) {
+
+    body {
+        background-image: url(./images/pattern-background-desktop.svg);
+        background-color: var(--primary-bale-blue);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .title h3{
+      font-size: 1.7rem;
+      padding-top: 1.4em;
+      padding-bottom: .7em;
+    }
+  
+    .text-content p {
+      font-size: 1rem;
+      padding-left: 3em;
+      padding-right: 3em;
+    }
+  
+    .plan-box {
+      margin: 0 3em 2em 3em;
+      padding: 1.5em;
+    }
+  
+    .plan-box-middle h5 {
+      font-size: 1.05rem;
+    }
+  
+    .plan-box-middle p {
+      font-size: 1.05rem;
+    }
+  
+    .plan-box-right a {
+      font-size: .9rem;
+    }
+  
+    [class^="btn-"]{
+      margin-left: 3em;
+      margin-right: 3em;
+    }
+ 
+  }
+
+
+
